@@ -1,0 +1,17 @@
+table {
+	width: 100%;
+	border-spacing: 0;
+}
+
+th {
+	background: #e6e6fa;
+	text-align: left;
+	padding: 8px;
+    font-weight: normal;
+}
+
+td {
+	vertical-align: top;
+	text-align: left;
+	padding: 8px;
+}

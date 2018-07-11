@@ -1,0 +1,41 @@
+<html ng-app="customerApp">
+
+<head>
+  <title>BxFin Test</title>
+  <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular.js" data-semver="1.4.9"></script>
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+<body ng-controller="customerCtrl">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Region</th>
+      <th>Rating</th>
+      <th>Opportunities</th>
+    </tr>
+    <tr ng-repeat="c in customersModel.customers">
+      <td>{{c.name}}</td>
+      <td ng-repeat="r in customersModel.regions | filter : c.regionCode">
+        {{ r.title }}
+      </td>
+      <td>{{c.rating}}</td>
+      <td>
+        <table>
+          <tr ng-repeat="o in c.opportunities">
+            <td>{{o.name}}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
+
+
+
